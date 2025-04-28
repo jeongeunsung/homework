@@ -1,6 +1,6 @@
-# 마크다운 문법
+![alt 대체텍스트](./../assets/pinerts.jpg)
 
-## Markdown 설명
+# Markdown 설명
 
 - Markdown은 아주 간단하게 글을 꾸밀 수 있는 "특별한 코드"
 - 존 그루버와 에런 스워츠가 협업하여 만들어진 Markdown Language
@@ -48,7 +48,6 @@
 ## 이미지
 
 ![대체 텍스트](이미지 경로 또는 링크)
-![내 캐릭터 그림](./../assets/me.jpg)
 
 # 코드
 
