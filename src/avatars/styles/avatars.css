@@ -13,8 +13,14 @@
 
 /* layout */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: hsl(0, 0%, 90%);
   font-family: 'SUIT', sans-serif;
@@ -71,12 +77,12 @@ figure > picture {
 }
 
 .status-info {
+  display: inline-block;
   position: absolute;
   bottom: 0;
-  display: inline-block;
+  right: 0;
   width: 18px;
   height: 18px;
-  right: 0;
   border-radius: 50%;
   border: 1px solid #fff;
 }
