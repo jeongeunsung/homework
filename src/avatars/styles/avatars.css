@@ -1,1 +1,90 @@
-/* 여기에 스타일을 구현해 주세요 */
+/* a11y */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 90%);
+  font-family: 'SUIT', sans-serif;
+}
+
+section {
+  position: relative;
+  width: 518px;
+  padding: 100px;
+  background-color: #fff;
+  border: 1px solid rgba(0 0 0 / 0.1);
+}
+
+section h2 {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  padding: 5px;
+  border: 1px solid rgba(0 0 0 / 0.1);
+  border-radius: 3px;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+section ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+section ul li {
+  display: inline-block;
+  float: left;
+}
+
+section ul li:not(:nth-child(1)):not(:nth-child(5)) {
+  margin-left: 20px;
+}
+
+section ul li:nth-child(-n + 4) {
+  margin-bottom: 20px;
+}
+
+/* avaters component */
+figure {
+  position: relative;
+}
+
+figure > picture {
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.status-info {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  right: 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.status-info.offline {
+  background-color: #dbdbdb;
+}
+
+.status-info.online {
+  background-color: #4cfe88;
+}
