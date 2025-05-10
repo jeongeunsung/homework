@@ -45,6 +45,7 @@ body {
   font-size: var(--size-16);
   color: var(--black-200);
   line-height: var(--leading-base);
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
 
 /* 컴포넌트 가이드 */
