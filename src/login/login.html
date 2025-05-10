@@ -30,10 +30,10 @@
         <a href="/" target="_self">현재페이지링크텍스트</a>
         <a href="/" target="_target" rel="noopener noreferrer">새창페이지링크텍스트<span class="sr-only">새 창으로 열림</span></a>
       </div>
-      <!-- 스위치버튼 컴포넌트 -->
+      <!-- 스위치버튼 컴포넌트 : off일 경우 끄기, on일 경우 켜기 -->
       <div class="switch-button">
-        <input type="checkbox" name="switch-button" id="switchBtn" />
-        <label for="switchBtn" role="switch" aria-checked="false"></label>
+        <input type="checkbox" name="switch-button" id="switchBtn0" />
+        <label for="switchBtn0" role="switch"><span class="sr-only">끄기</span></label>
       </div>
     </div>
     <!-- // 컴포넌트 가이드 -->
@@ -71,7 +71,9 @@
             <div class="check-box circle-icon"><input type="checkbox" name="rememberMe" id="formCheck1" value="false" /><label for="formCheck1">로그인 상태 유지</label></div>
             <div class="link-box">
               <span class="link ip-check"><a href="./pages/ip_security.html" target="_self">IP 보안</a></span
-              ><span class="switch-button"><input type="checkbox" name="switch-button" id="switchBtn" /><label for="switchBtn" role="switch" aria-checked="false"></label></span>
+              ><span class="switch-button"
+                ><input type="checkbox" name="ipSecuritySwitch" id="switchBtn1" /><label for="switchBtn1" role="switch"><span class="sr-only">IP 보안 설정 끄기</span></label></span
+              >
             </div>
           </div>
           <div class="btn-box">
