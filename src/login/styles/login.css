@@ -1,11 +1,12 @@
 :root {
-  /* 네이버 색상 테마 */
+  /* 색상 테마 */
   --white: #fff;
   --black-100: #333;
   --black-200: #121212;
   --red: #ff1414;
   --gray-100: #dadada;
   --grey-200: #999;
+  --primary-color: #03cf5d;
 
   /* 글자 크기 */
   --size-12: 12px;
@@ -20,6 +21,10 @@
   --spacing-7: 0.4375rem;
   --spacing-8: 0.5rem;
   --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-13: 0.8125rem;
+  --spacing-14: 0.875rem;
+  --spacing-16: 1rem;
   --spacing-20: 1.25rem;
 }
 
@@ -39,16 +44,223 @@
 body {
   font-size: var(--size-16);
   color: var(--black-200);
+  line-height: var(--leading-base);
 }
 
-/* 로그인 컴포넌트 */
+/* 컴포넌트 가이드 */
+.component-wrapper {
+  margin: 30px;
+}
+
+/* 입력서식 컴포넌트 */
+input:focus,
+a:focus,
+button:focus,
+input:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  --focus-color: #24388d;
+
+  outline: 1px solid var(--focus-color);
+}
+
 .form-input {
+  input {
+    width: 100%;
+    height: 45px;
+    padding: 0 var(--spacing-20) 0 var(--spacing-20);
+    border: 1px solid var(--gray-100);
+    background: var(--white);
+    font-size: var(--size-14);
+
+    &::placeholder {
+      color: var(--grey-200);
+    }
+
+    &:focus,
+    &:focus-visible {
+      --focus-input: #03cf5d;
+
+      outline: 1px solid var(--focus-input);
+      background: #e9f0fd;
+    }
+
+    @media (width >= 768px) {
+      width: 500px;
+    }
+  }
+
+  .message {
+    margin-top: var(--spacing-7);
+    font-size: var(--size-12);
+
+    &.error {
+      color: var(--red);
+    }
+  }
+}
+
+/* 버튼 컴포넌트 */
+.btn,
+[type='button'],
+[type='submit'],
+[type='reset'] {
+  min-width: 87px;
+  min-height: 45px;
+  padding: var(--spacing-13) var(--spacing-13) var(--spacing-14);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: var(--white);
+  line-height: 1;
+
+  &.btn-primary {
+    color: var(--white);
+    background: var(--primary-color);
+  }
+}
+
+/* 체크박스 컴포넌트 */
+.check-box {
   label {
+    color: var(--black-100);
+    font-size: var(--size-14);
   }
 
   input {
-    width: 100%;
-    height: 48px;
-    border: 1px solid var(--gray-100);
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+  }
+
+  &.circle-icon {
+    input {
+      appearance: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url('../images/unchecked.svg') no-repeat;
+
+      &:checked {
+        background: url('../images/checked.svg') no-repeat;
+      }
+    }
+  }
+}
+
+/* 하이퍼링크 컴포넌트 */
+.link {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* 토글버튼 컴포넌트 */
+.switch-button {
+  position: relative;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + label::before {
+      content: 'ON';
+    }
+
+    &:focus + label,
+    &:focus-visible + label {
+      --focus-color: #24388d;
+
+      outline: 1px solid var(--focus-color);
+      outline-offset: 2px;
+    }
+  }
+
+  label {
+    font-weight: 700;
+
+    &::before {
+      content: 'OFF';
+    }
+  }
+}
+
+/* 로그인 섹션 */
+.content {
+  padding: 4.375rem 0.9375rem 0 0.9375rem;
+
+  @media (width >= 768px) {
+    padding: 6.25rem 0 0;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 230px;
+    margin: 0 auto;
+    line-height: 1;
+
+    a {
+      display: block;
+    }
+  }
+
+  .login-wrapper {
+    margin-top: 2.8125rem;
+
+    @media (width >= 768px) {
+      margin-top: 3.125rem;
+    }
+
+    .form-input {
+      + .form-input {
+        margin-top: var(--spacing-10);
+      }
+
+      .message.error {
+        display: none;
+      }
+
+      input:invalid:focus + .message.error {
+        display: block;
+      }
+    }
+
+    .btn-box {
+      margin-top: var(--spacing-20);
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .form-check-box {
+      display: flow-root;
+      margin-top: var(--spacing-10);
+
+      .check-box {
+        text-align: right;
+
+        @media (width >= 768px) {
+          display: inline-block;
+          float: left;
+        }
+      }
+
+      .link-box {
+        display: none;
+      }
+
+      @media (width >= 768px) {
+        .link-box {
+          display: inline-block;
+          float: right;
+
+          .ip-check {
+            margin-right: var(--spacing-8);
+          }
+        }
+      }
+    }
   }
 }
