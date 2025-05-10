@@ -153,7 +153,7 @@ button:focus-visible {
   }
 }
 
-/* 토글버튼 컴포넌트 */
+/* 스위치버튼 컴포넌트 */
 .switch-button {
   position: relative;
 
