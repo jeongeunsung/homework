@@ -28,12 +28,12 @@
       <!-- 하이퍼링크 컴포넌트  -->
       <div class="link">
         <a href="/" target="_self">현재페이지링크텍스트</a>
-        <a href="/" target="_target" rel="noopener noreferrer">새창페이지링크텍스트<span class="sr-only">새 창으로 열림</span></a>
+        <a href="/" target="_blank" rel="noopener noreferrer">새창페이지링크텍스트<span class="sr-only">새 창으로 열림</span></a>
       </div>
       <!-- 스위치버튼 컴포넌트 : off일 경우 끄기, on일 경우 켜기 -->
       <div class="switch-button">
-        <input type="checkbox" name="switch-button" id="switchBtn0" />
-        <label for="switchBtn0" role="switch"><span class="sr-only">끄기</span></label>
+        <input type="checkbox" name="switch-button" id="switchBtn0" role="switch" />
+        <label for="switchBtn0"><span class="sr-only">끄기</span></label>
       </div>
     </div>
     <!-- // 컴포넌트 가이드 -->
@@ -72,7 +72,7 @@
             <div class="link-box">
               <span class="link ip-check"><a href="./pages/ip_security.html" target="_self">IP 보안</a></span
               ><span class="switch-button"
-                ><input type="checkbox" name="ipSecuritySwitch" id="switchBtn1" /><label for="switchBtn1" role="switch"><span class="sr-only">IP 보안 설정 끄기</span></label></span
+                ><input type="checkbox" name="ipSecuritySwitch" id="switchBtn1" role="switch" /><label for="switchBtn1"><span class="sr-only">IP 보안 설정 끄기</span></label></span
               >
             </div>
           </div>
