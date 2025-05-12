@@ -33,7 +33,7 @@
       <!-- 스위치버튼 컴포넌트 : off일 경우 끄기, on일 경우 켜기 -->
       <div class="switch-button">
         <input type="checkbox" name="switch-button" id="switchBtn0" role="switch" />
-        <label for="switchBtn0"><span class="sr-only">끄기</span></label>
+        <label for="switchBtn0"></label>
       </div>
     </div>
     <!-- // 컴포넌트 가이드 -->
@@ -71,9 +71,7 @@
             <div class="check-box circle-icon"><input type="checkbox" name="rememberMe" id="formCheck1" value="false" /><label for="formCheck1">로그인 상태 유지</label></div>
             <div class="link-box">
               <span class="link ip-check"><a href="./pages/ip_security.html" target="_self">IP 보안</a></span
-              ><span class="switch-button"
-                ><input type="checkbox" name="ipSecuritySwitch" id="switchBtn1" role="switch" /><label for="switchBtn1"><span class="sr-only">IP 보안 설정 끄기</span></label></span
-              >
+              ><span class="switch-button"><input type="checkbox" name="ipSecuritySwitch" id="switchBtn1" role="switch" aria-label="IP보안설정" /><label for="switchBtn1"></label></span>
             </div>
           </div>
           <div class="btn-box">
