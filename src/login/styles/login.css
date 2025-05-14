@@ -17,6 +17,7 @@
   --leading-base: 1.5;
 
   /* 여백 및 간격 */
+  --spacing-2: 0.125rem;
   --spacing-4: 0.25rem;
   --spacing-7: 0.4375rem;
   --spacing-8: 0.5rem;
@@ -54,9 +55,6 @@ body {
 }
 
 /* 입력서식 컴포넌트 */
-input:focus,
-a:focus,
-button:focus,
 input:focus-visible,
 a:focus-visible,
 button:focus-visible {
@@ -67,7 +65,7 @@ button:focus-visible {
 
 .form-input {
   + .form-input {
-    margin-top: var(--spacing-10);
+    /* margin-top: var(--spacing-10); */
   }
 
   input {
@@ -82,7 +80,6 @@ button:focus-visible {
       color: var(--grey-200);
     }
 
-    &:focus,
     &:focus-visible {
       --focus-input: #03cf5d;
 
@@ -96,17 +93,17 @@ button:focus-visible {
   }
 
   .message {
-    margin-top: var(--spacing-7);
+    margin-top: var(--spacing-2);
     font-size: var(--size-12);
 
     &.error {
       color: var(--red);
-      display: none;
+      visibility: hidden;
     }
   }
 
-  input:invalid:focus + .message.error {
-    display: block;
+  input:user-invalid + .message.error {
+    visibility: visible;
   }
 }
 
@@ -115,13 +112,14 @@ button:focus-visible {
 [type='button'],
 [type='submit'],
 [type='reset'] {
-  min-width: 87px;
-  min-height: 45px;
-  padding: var(--spacing-13) var(--spacing-13) var(--spacing-14);
+  inline-size: 100%;
+  block-size: 45px;
+  min-inline-size: 87px;
+  min-block-size: 45px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: transparent;
   color: var(--white);
-  line-height: 1;
+  padding: 0.5em;
 
   &.btn-primary {
     color: var(--white);
@@ -150,8 +148,7 @@ button:focus-visible {
       background-size: 100%;
 
       &:checked {
-        background: url('../images/checked.svg') no-repeat;
-        background-size: 100%;
+        background-image: url('../images/checked.svg');
       }
     }
   }
@@ -168,6 +165,9 @@ button:focus-visible {
 /* 스위치버튼 컴포넌트 */
 .switch-button {
   position: relative;
+  display: inline-block;
+  width: 2em;
+  text-align: right;
 
   input {
     position: absolute;
@@ -179,7 +179,6 @@ button:focus-visible {
       content: 'ON';
     }
 
-    &:focus + label,
     &:focus-visible + label {
       --focus-color: #24388d;
 
@@ -209,7 +208,7 @@ button:focus-visible {
 
   .logo {
     width: 230px;
-    margin: 0 auto;
+    margin-inline: auto;
     line-height: 1;
 
     a {
@@ -219,38 +218,35 @@ button:focus-visible {
 
   .login-wrapper {
     margin-top: 2.8125rem;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 5px;
 
     @media (width >= 768px) {
       margin-top: 3.125rem;
     }
 
     .btn-box {
-      margin-top: var(--spacing-20);
-
       .btn {
         width: 100%;
       }
     }
 
     .form-check-box {
-      display: flow-root;
-      margin-top: var(--spacing-10);
+      order: 1;
+      display: flex;
+      flex-flow: row nowrap;
 
       .check-box {
         text-align: right;
-
-        @media (width >= 768px) {
-          display: inline-block;
-          float: left;
-        }
       }
 
       .link-box {
         display: none;
 
         @media (width >= 768px) {
-          display: inline-block;
-          float: right;
+          display: block;
+          margin-inline-start: auto;
 
           .ip-check {
             margin-right: var(--spacing-8);
