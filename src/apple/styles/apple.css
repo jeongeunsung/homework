@@ -1,3 +1,45 @@
-@import "./card-component.css";
+@import './card-component.css';
+
+body {
+  color: var(--black);
+}
 
 /* 카드 레이아웃 */
+.content {
+  display: grid;
+  gap: var(--base-spacing);
+}
+
+.card-item-box {
+  padding-top: var(--large-spacing);
+
+  @media (min-width: 1024px) {
+    padding-top: var(--extra-large-spacing);
+  }
+
+  &.dark {
+    /* 버튼 */
+    .btn-blue-line:focus-visible,
+    .btn-blue:focus-visible,
+    .btn-blue-line:focus,
+    .btn-blue:focus {
+      -webkit-box-shadow:
+        0 0 0 3px #000,
+        0 0 0 5px #0071e3;
+      box-shadow:
+        0 0 0 3px #000,
+        0 0 0 5px #0071e3;
+      outline: none;
+    }
+  }
+
+  .text-box {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--small-spacing);
+    align-items: center;
+    text-align: center;
+    z-index: 4;
+  }
+}

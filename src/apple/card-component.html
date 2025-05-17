@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,60 @@
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/card-component.css" />
+    <style>
+      body {
+        margin: 50px;
+        background: #ddd;
+      }
+    </style>
   </head>
   <body>
     <!-- 카드 컴포넌트 -->
-
+    <!-- 레이아웃 컴포넌트 -->
+    <section class="grid-template-columns">
+      <div>1024이상 레이아웃 1단</div>
+      <div>1024이상 레이아웃 1단</div>
+      <div>1024이상 레이아웃 1단</div>
+      <div>1024이상 레이아웃 1단</div>
+    </section>
+    <section class="grid-template-columns lg-cols-2">
+      <div>1024이상 레이아웃 2단</div>
+      <div>1024이상 레이아웃 2단</div>
+      <div>1024이상 레이아웃 2단</div>
+      <div>1024이상 레이아웃 2단</div>
+    </section>
+    <br />
+    <!-- 제목 컴포넌트 -->
+    <h2 class="title">제목</h2>
+    <h2 class="title white">제목</h2>
+    <br />
+    <!-- 부제목 컴포넌트 -->
+    <p class="sub-title">부제목</p>
+    <p class="sub-title white">부제목</p>
+    <br />
+    <!-- 설명 -->
+    <p class="description">출시일 추후 공개</p>
+    <br />
+    <!-- 버튼(링크) 컴포넌트 -->
+    <div class="btn-box">
+      <a href="/" class="btn btn-black" target="_blank"><span class="sr-only"></span>기본 버튼</a>
+      <a href="/" class="btn btn-black-line" target="_blank"><span class="sr-only"></span>기본 라인 버튼</a>
+      <a href="/" class="btn btn-blue" target="_blank"><span class="sr-only"></span>파란색 버튼</a>
+      <a href="/" class="btn btn-blue-line" target="_blank"><span class="sr-only"></span>파란색 라인 버튼</a>
+    </div>
+    <br />
+    <!-- 배경 이미지 테마별 카드 아이템 -->
+    <div class="card-item-box dark">
+      <a href="/" class="card-anchor" aria-hidden="true" tabindex="-1"></a>
+      <div class="img-box">
+        <figure class="image image-03"></figure>
+      </div>
+    </div>
+    <div class="card-item-box">
+      <a href="/" class="card-anchor" aria-hidden="true" tabindex="-1"></a>
+      <div class="img-box">
+        <figure class="image image-04" data-name=""></figure>
+      </div>
+    </div>
   </body>
 </html>
