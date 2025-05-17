@@ -143,7 +143,8 @@
 
   &[class$='-01'] {
     background-image: url('../products/ipad_pro.jpeg');
-    + @supports (background-image: url('../products/ipad_pro.webp')) {
+
+    @supports (background-image: url('../products/ipad_pro.webp')) {
       background-image: url('../products/ipad_pro.webp');
     }
 
@@ -158,6 +159,10 @@
 
     @media (min-width: 1024px) {
       background-image: url('../products/ipad_pro_wide.jpeg');
+
+      @supports (background-image: url('../products/ipad_pro_wide.webp')) {
+        background-image: url('../products/ipad_pro_wide.webp');
+      }
 
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -189,6 +194,10 @@
     @media (min-width: 1024px) {
       background-image: url('../products/ipad_air_wide.jpeg');
 
+      @supports (background-image: url('../products/ipad_air_wide.webp')) {
+        background-image: url('../products/ipad_air_wide.webp');
+      }
+
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../products/ipad_air_wide_2x.jpeg');
@@ -218,6 +227,10 @@
 
     @media (min-width: 1024px) {
       background-image: url('../products/iphone15_pro_wide.jpeg');
+
+      @supports (background-image: url('../products/iphone15_pro_wide.webp')) {
+        background-image: url('../products/iphone15_pro_wide.webp');
+      }
 
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
