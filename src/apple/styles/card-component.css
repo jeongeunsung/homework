@@ -66,6 +66,10 @@
     border-color: rgba(0, 0, 0, 0);
     color: var(--white);
     font-size: var(--xx-small-text);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: 1024px) {
       font-size: var(--x-small-text);
@@ -143,6 +147,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/ipad_pro_2x.jpeg');
+
+      @supports (background-image: url('../products/ipad_pro_2x.webp')) {
+        background-image: url('../products/ipad_pro_2x.webp');
+      }
     }
 
     @media (min-width: 1024px) {
@@ -151,6 +159,10 @@
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../products/ipad_pro_wide_2x.jpeg');
+
+        @supports (background-image: url('../products/ipad_pro_wide_2x.webp')) {
+          background-image: url('../products/ipad_pro_wide_2x.webp');
+        }
       }
     }
   }
@@ -161,6 +173,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/ipad_air_2x.jpeg');
+
+      @supports (background-image: url('../products/ipad_air_2x.webp')) {
+        background-image: url('../products/ipad_air_2x.webp');
+      }
     }
 
     @media (min-width: 1024px) {
@@ -169,6 +185,10 @@
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../products/ipad_air_wide_2x.jpeg');
+
+        @supports (background-image: url('../products/ipad_air_wide_2x.webp')) {
+          background-image: url('../products/ipad_air_wide_2x.webp');
+        }
       }
     }
   }
@@ -179,6 +199,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/iphone15_pro_2x.jpeg');
+
+      @supports (background-image: url('../products/iphone15_pro_2x.webp')) {
+        background-image: url('../products/iphone15_pro_2x.webp');
+      }
     }
 
     @media (min-width: 1024px) {
@@ -187,6 +211,10 @@
       /* 2배율 디바이스 대응 */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../products/iphone15_pro_wide_2x.jpeg');
+
+        @supports (background-image: url('../products/iphone15_pro_wide_2x.webp')) {
+          background-image: url('../products/iphone15_pro_wide_2x.webp');
+        }
       }
     }
   }
@@ -197,6 +225,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/iphone15_2x.jpeg');
+
+      @supports (background-image: url('../products/iphone15_2x.webp')) {
+        background-image: url('../products/iphone15_2x.webp');
+      }
     }
   }
 
@@ -206,6 +238,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/apple_watch_2x.jpeg');
+
+      @supports (background-image: url('../products/apple_watch_2x.webp')) {
+        background-image: url('../products/apple_watch_2x.webp');
+      }
     }
   }
 
@@ -215,6 +251,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/macbook_air_2x.jpeg');
+
+      @supports (background-image: url('../products/macbook_air_2x.webp')) {
+        background-image: url('../products/macbook_air_2x.webp');
+      }
     }
   }
 
@@ -224,6 +264,10 @@
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/airpods_pro_2x.jpeg');
+
+      @supports (background-image: url('../products/airpods_pro_2x.webp')) {
+        background-image: url('../products/airpods_pro_2x.webp');
+      }
     }
   }
 }
