@@ -143,6 +143,9 @@
 
   &[class$='-01'] {
     background-image: url('../products/ipad_pro.jpeg');
+    + @supports (background-image: url('../products/ipad_pro.webp')) {
+      background-image: url('../products/ipad_pro.webp');
+    }
 
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -170,6 +173,10 @@
   &[class$='-02'] {
     background-image: url('../products/ipad_air.jpeg');
 
+    @supports (background-image: url('../products/ipad_air.webp')) {
+      background-image: url('../products/ipad_air.webp');
+    }
+
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/ipad_air_2x.jpeg');
@@ -195,6 +202,10 @@
 
   &[class$='-03'] {
     background-image: url('../products/iphone15_pro.jpeg');
+
+    @supports (background-image: url('../products/iphone15_pro.webp')) {
+      background-image: url('../products/iphone15_pro.webp');
+    }
 
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -222,6 +233,10 @@
   &[class$='-04'] {
     background-image: url('../products/iphone15.jpeg');
 
+    @supports (background-image: url('../products/iphone15.webp')) {
+      background-image: url('../products/iphone15.webp');
+    }
+
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/iphone15_2x.jpeg');
@@ -234,6 +249,10 @@
 
   &[class$='-05'] {
     background-image: url('../products/apple_watch.jpeg');
+
+    @supports (background-image: url('../products/apple_watch.webp')) {
+      background-image: url('../products/apple_watch.webp');
+    }
 
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -248,6 +267,10 @@
   &[class$='-06'] {
     background-image: url('../products/macbook_air.jpeg');
 
+    @supports (background-image: url('../products/macbook_air.webp')) {
+      background-image: url('../products/macbook_air.webp');
+    }
+
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../products/macbook_air_2x.jpeg');
@@ -260,6 +283,10 @@
 
   &[class$='-07'] {
     background-image: url('../products/airpods_pro.jpeg');
+
+    @supports (background-image: url('../products/airpods_pro.webp')) {
+      background-image: url('../products/airpods_pro.webp');
+    }
 
     /* 2배율 디바이스 대응 */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
