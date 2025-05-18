@@ -31,6 +31,10 @@ body {
         0 0 0 5px #0071e3;
       outline: none;
     }
+
+    .description {
+      color: #9c9ca3;
+    }
   }
 
   .text-box {
