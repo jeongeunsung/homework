@@ -34,6 +34,7 @@
 .sub-title {
   font-size: var(--base-text);
   line-height: var(--line-normal);
+  font-weight: 500;
 
   &.white {
     color: var(--white);
@@ -320,10 +321,6 @@
   align-items: center;
   height: var(--size);
   background: #f5f5f7;
-
-  &.dark {
-    background: #000;
-  }
 
   .card-anchor {
     position: absolute;

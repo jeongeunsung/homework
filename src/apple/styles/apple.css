@@ -18,6 +18,8 @@ body {
   }
 
   &.dark {
+    background: #000;
+
     /* 버튼 */
     .btn-blue-line:focus-visible,
     .btn-blue:focus-visible,
@@ -30,6 +32,10 @@ body {
         0 0 0 3px #000,
         0 0 0 5px #0071e3;
       outline: none;
+    }
+
+    .description {
+      color: #9c9ca3;
     }
   }
 
