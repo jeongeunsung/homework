@@ -2,12 +2,12 @@
   "scripts": {
     "start": "live-server . --port=8090 --host=localhost --no-browser",
     "format": "prettier . --check",
-    // simple-webp-converter(사용은 편하지만 안되는 제약사항이 많은 것 같음, 그리고 업데이트가 많이 안되는 단점)
     "webp": "simple-webp-converter",
-    // image-webp-converter (특정 폴더의 파일들을 webp으로 변환할수 있고 퀄리티도 적용할 수 있는 장점이 있음)
-    "webpc": "webpc --path ./src/apple/products --destination ./src/apple/products --quality 90"
+    "webpc": "webpc --path ./src/apple/products --destination ./src/apple/products --quality 90",
+    "avif": "avif --input='./src/apple/products/*.{jpg,jpeg,png}' --output='./src/apple/products' --overwrite"
   },
   "devDependencies": {
+    "avif": "^0.5.3",
     "image-webp-converter": "^1.2.3",
     "live-server": "^1.2.2",
     "prettier": "^3.5.3",
